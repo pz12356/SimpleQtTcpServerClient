@@ -10,10 +10,9 @@ Qt 6.8  + CMake 3.29
 
 ```sh
 cd TCPServer
-mkdir build
-cd build && cmake ..
-make install
-make
+
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+cmake --build build --config Debug
 ```
 
 
@@ -22,10 +21,8 @@ make
 
 ```sh
 cd TCPClient
-mkdir build
-cd build && cmake ..
-make install
-make
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+cmake --build build --config Debug
 ```
 
 先运行服务端程序,再运行客户端程序, 需联网
