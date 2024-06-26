@@ -1,0 +1,6 @@
+TCPClient/build
+TCPServer/build
+
+*/.cache
+
+*/CMakeLists.txt.user*
