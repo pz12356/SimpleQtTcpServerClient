@@ -2,11 +2,11 @@
 
 
 
-Qt 6.8  + CMake
+Qt 6.8  + CMake 3.29
 
 
 
-服务器启动
+服务器编译
 
 ```sh
 cd TCPServer
@@ -18,7 +18,7 @@ make
 
 
 
-客户端启动
+客户端编译
 
 ```sh
 cd TCPClient
