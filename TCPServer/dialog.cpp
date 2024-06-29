@@ -66,7 +66,7 @@ void Dialog::appendToSocketList(QTcpSocket *socket) {
 }
 
 void Dialog::readSocket() {
-  QTcpSocket *socket = qobject_cast<QTcpSocket *>(sender());
+  auto *socket = qobject_cast<QTcpSocket *>(sender());
 
   QByteArray buffer;
 
@@ -94,7 +94,7 @@ void Dialog::readSocket() {
 }
 
 void Dialog::discardSocket() {
-  QTcpSocket *socket = qobject_cast<QTcpSocket *>(sender());
+  auto *socket = qobject_cast<QTcpSocket *>(sender());
   if (connection_set.contains(socket)) {
     QString message = QString("(System) A client %1 has just left the room")
                           .arg(socket->peerAddress().toString() + ":" +
@@ -156,7 +156,7 @@ void Dialog::sendMessage(QTcpSocket *socket) {
   }
 }
 
-void Dialog::displayMessage(const QString &str) {
+void Dialog::displayMessage(const QString &str) const {
   ui->textBrowser_receivedMessages->append(str);
 }
 

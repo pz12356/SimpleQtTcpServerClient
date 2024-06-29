@@ -18,8 +18,8 @@ class Dialog : public QDialog {
   Q_OBJECT
 
 public:
-  Dialog(QWidget *parent = nullptr);
-  ~Dialog();
+  explicit Dialog(QWidget *parent = nullptr);
+  ~Dialog() override;
 
 signals:
   void newMessage(QString);
@@ -31,7 +31,7 @@ private slots:
   void readSocket();
   void discardSocket();
 
-  void displayMessage(const QString &str);
+  void displayMessage(const QString &str) const;
   void sendMessage(QTcpSocket *socket);
 
   void on_pushButton_sendMessage_clicked();
