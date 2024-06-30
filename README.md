@@ -2,7 +2,7 @@
 
 
 
-Qt 6.8  + CMake 3.29
+Qt 6.8  + CMake 3.29 + MinGW 13.1
 
 
 
